@@ -2,7 +2,6 @@ package com.lab44.lab42.service;
 
 import ch.qos.logback.core.status.Status;
 import com.lab44.lab42.model.Employee;
-import com.lab44.lab42.model.Status;
 import com.lab44.lab42.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +28,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     public List<Employee> getEmployeeByStatus(Status status) {
         return employeeRepository.getEmployeeByStatus(status);
     }
+
 
     @Override
     public List<Employee> getEmployeeByDepartment(String department) {

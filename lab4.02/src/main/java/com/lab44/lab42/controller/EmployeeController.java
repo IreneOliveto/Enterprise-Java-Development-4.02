@@ -1,7 +1,7 @@
 package com.lab44.lab42.controller;
 
+import ch.qos.logback.core.status.Status;
 import com.lab44.lab42.model.Employee;
-import com.lab44.lab42.model.Status;
 import com.lab44.lab42.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
