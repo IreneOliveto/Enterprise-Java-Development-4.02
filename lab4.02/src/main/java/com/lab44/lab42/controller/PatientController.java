@@ -38,12 +38,16 @@ public class PatientController {
 
     //Create a route to get patients by the department that their admitting doctor is in
     // (For example, get all patients admitted by a doctor in cardiology).
-    /*@GetMapping("/patients/{department}")
+    @GetMapping("/patients/{department}")
     public List<Patient> findAllByDepartment(@PathVariable(value="department") String department) {
         return patientService.findAllByDepartment(department);
-    }*/
+    }
 
     //Create a route to get all patients with a doctor whose status is OFF.
+    @GetMapping("/patients/{status}")
+    public List<Patient> findAllByStatus(@PathVariable(value="status") String status) {
+        return patientService.findAllByStatus(status);
+    }
 
 
 

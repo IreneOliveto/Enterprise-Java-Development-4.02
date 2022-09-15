@@ -1,7 +1,7 @@
 package com.lab44.lab42.repository;
 
+import ch.qos.logback.core.status.Status;
 import com.lab44.lab42.model.Employee;
-import com.lab44.lab42.model.Status;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

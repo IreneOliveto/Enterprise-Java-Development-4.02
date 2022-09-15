@@ -16,8 +16,7 @@ public class EmployeeController {
     @Autowired
     EmployeeService employeeService;
 
-    //Create a route to get all doctors.
-    @GetMapping("/employees")
+    //Create a route to get all doctors.    @GetMapping("/employees")
     public List<Employee> getAllEmployees() {
         return employeeService.employeeList();
     }
@@ -33,4 +32,11 @@ public class EmployeeController {
     public Employee getEmployeeByStatus(@PathVariable(value="status") Status status) {
         return (Employee) employeeService.getEmployeeByStatus(status);
     }
+
+    //Get all doctors by department
+    @GetMapping("/employees/{department}")
+    public Employee getEmployeeByDepartment(@PathVariable(value="department") String department) {
+        return (Employee) employeeService.getEmployeeByDepartment(department);
+    }
+
 }

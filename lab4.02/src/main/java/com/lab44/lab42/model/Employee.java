@@ -49,9 +49,7 @@ public class Employee {
         return status;
     }
 
-    public void setStatus(Status status) {
-        this.status = status;
-    }
+
 
     public List<Patient> getPatientList() {
         return patientList;

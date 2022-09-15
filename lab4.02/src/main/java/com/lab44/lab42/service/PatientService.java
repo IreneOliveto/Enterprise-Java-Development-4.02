@@ -15,4 +15,6 @@ public interface PatientService {
     List<Patient> findAllByDateOfBirthBetween(Date dateOfBirth, Date dateOfBirth2);
 
     List<Patient> findAllByDepartment(String department);
+
+    List<Patient> findAllByStatus(String status);
 }
