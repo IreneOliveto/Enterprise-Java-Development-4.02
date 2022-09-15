@@ -1,13 +1,12 @@
-package com.exercise.lab42.service;
+package com.lab44.lab42.service;
 
-import com.exercise.lab42.model.Employee;
-import com.exercise.lab42.model.Patient;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.lab44.lab42.model.Patient;
 
 import java.util.Date;
 import java.util.List;
 
 public interface PatientService {
+
 
     List<Patient> patientList();
 

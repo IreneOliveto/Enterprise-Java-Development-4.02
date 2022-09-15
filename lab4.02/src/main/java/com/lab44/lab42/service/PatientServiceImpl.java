@@ -1,7 +1,7 @@
-package com.exercise.lab42.service;
+package com.lab44.lab42.service;
 
-import com.exercise.lab42.model.Patient;
-import com.exercise.lab42.repository.PatientRepository;
+import com.lab44.lab42.model.Patient;
+import com.lab44.lab42.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +9,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class PatientServiceImp implements PatientService {
+public class PatientServiceImpl implements PatientService {
 
     @Autowired
     PatientRepository patientRepository;
@@ -33,5 +33,6 @@ public class PatientServiceImp implements PatientService {
     public List<Patient> findAllByDepartment(String department) {
         return patientRepository.findAllByDepartment();
     }
+
 
 }

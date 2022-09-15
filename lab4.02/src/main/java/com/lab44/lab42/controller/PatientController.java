@@ -1,9 +1,12 @@
-package com.exercise.lab42.controller;
+package com.lab44.lab42.controller;
 
-import com.exercise.lab42.model.Patient;
-import com.exercise.lab42.service.PatientService;
+import com.lab44.lab42.model.Patient;
+import com.lab44.lab42.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Date;
 import java.util.List;
@@ -13,6 +16,7 @@ public class PatientController {
 
     @Autowired
     PatientService patientService;
+
 
     //Create a route to get all patients.
     @GetMapping("/patient")
@@ -34,10 +38,12 @@ public class PatientController {
 
     //Create a route to get patients by the department that their admitting doctor is in
     // (For example, get all patients admitted by a doctor in cardiology).
-    @GetMapping("/patients/{department}")
+    /*@GetMapping("/patients/{department}")
     public List<Patient> findAllByDepartment(@PathVariable(value="department") String department) {
         return patientService.findAllByDepartment(department);
-    }
+    }*/
+
+    //Create a route to get all patients with a doctor whose status is OFF.
 
 
 

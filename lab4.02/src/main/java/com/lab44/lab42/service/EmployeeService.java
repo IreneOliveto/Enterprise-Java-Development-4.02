@@ -1,8 +1,7 @@
-package com.exercise.lab42.service;
+package com.lab44.lab42.service;
 
-
-import com.exercise.lab42.model.Employee;
-import com.exercise.lab42.model.Status;
+import com.lab44.lab42.model.Employee;
+import com.lab44.lab42.model.Status;
 
 import java.util.List;
 

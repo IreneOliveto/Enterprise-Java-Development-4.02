@@ -1,15 +1,15 @@
-package com.exercise.lab42.service;
+package com.lab44.lab42.service;
 
-import com.exercise.lab42.model.Employee;
-import com.exercise.lab42.model.Status;
-import com.exercise.lab42.repository.EmployeeRepository;
+import com.lab44.lab42.model.Employee;
+import com.lab44.lab42.model.Status;
+import com.lab44.lab42.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class EmployeeServiceImp implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService{
 
     @Autowired
     EmployeeRepository employeeRepository;
@@ -33,7 +33,4 @@ public class EmployeeServiceImp implements EmployeeService {
     public List<Employee> getEmployeeByDepartment(String department) {
         return employeeRepository.getEmployeeByDepartment(department);
     }
-
-
-
 }

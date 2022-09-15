@@ -1,4 +1,4 @@
-package com.exercise.lab42.model;
+package com.lab44.lab42.model;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -49,3 +49,4 @@ public class Patient {
         this.admittedBy = admittedBy;
     }
 }
+
