@@ -19,7 +19,7 @@ public class PatientController {
 
 
     //Create a route to get all patients.
-    @GetMapping("/patient")
+    @GetMapping("/patients")
     public List<Patient> getAllPatient() {
         return patientService.patientList();
     }
