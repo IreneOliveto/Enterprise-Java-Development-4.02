@@ -13,11 +13,11 @@ public interface PatientRepository extends JpaRepository<Patient, Integer> {
 
     public List<Patient> findByDateOfBirthBetween();
 
-    /*@Query(value = "SELECT * FROM patient p left join employee e on e.employee_id = p.admitted_by WHERE e.department = :department",
-            nativeQuery = true)*/
+    @Query(value = "SELECT * FROM patient p left join employee e on e.employee_id = p.admitted_by WHERE e.department = :department",
+            nativeQuery = true)
     public List<Patient> findAllPatientsByEmployeeDepartment(@Param("department") String department);
 
-    /*@Query(value = "SELECT * FROM patient p left join employee e on e.employee_id = p.admitted_by WHERE e.status = :status",
-            nativeQuery = true)*/
+    @Query(value = "SELECT * FROM patient p left join employee e on e.employee_id = p.admitted_by WHERE e.status = :status",
+            nativeQuery = true)
     public List<Patient> findAllPatientsByEmployeeStatus(@Param("status") String status);
 }
