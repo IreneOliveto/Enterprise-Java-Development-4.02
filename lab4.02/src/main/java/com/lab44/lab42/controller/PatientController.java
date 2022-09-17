@@ -25,7 +25,7 @@ public class PatientController {
     }
 
     //Create a route to get a patient by patient_id.
-    @GetMapping("/patient/id/{patient_id}")
+    @GetMapping("/patient/{patient_id}")
     public Patient getPatientById(@PathVariable(value="patient_id") int patientId) {
         return patientService.getPatientById(patientId);
     }

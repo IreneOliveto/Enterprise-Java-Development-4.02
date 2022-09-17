@@ -1,23 +1,23 @@
-package com.lab44.lab42.controller;
+    package com.lab44.lab42.controller;
 
-import ch.qos.logback.core.status.Status;
-import com.lab44.lab42.model.Employee;
-import com.lab44.lab42.service.EmployeeService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+    import ch.qos.logback.core.status.Status;
+    import com.lab44.lab42.model.Employee;
+    import com.lab44.lab42.service.EmployeeService;
+    import org.springframework.beans.factory.annotation.Autowired;
+    import org.springframework.web.bind.annotation.GetMapping;
+    import org.springframework.web.bind.annotation.PathVariable;
+    import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+    import java.util.List;
 
-@RestController
-public class EmployeeController {
+    @RestController
+    public class EmployeeController {
 
-    @Autowired
-    EmployeeService employeeService;
+        @Autowired
+        EmployeeService employeeService;
 
-    //Create a route to get all doctors.
-    @GetMapping("/employees")
+        //Create a route to get all doctors.
+        @GetMapping("/employees")
     public List<Employee> getAllEmployees() {
         return employeeService.employeeList();
     }
