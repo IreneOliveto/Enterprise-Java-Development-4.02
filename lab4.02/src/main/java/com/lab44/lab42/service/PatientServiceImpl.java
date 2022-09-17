@@ -30,13 +30,13 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
-    public List<Patient> findAllByDepartment(String department) {
-        return patientRepository.findAllByDepartment(department);
+    public List<Patient> findAllPatientsByEmployeeDepartment(String department) {
+        return patientRepository.findAllPatientsByEmployeeDepartment(department);
     }
 
     @Override
-    public List<Patient> findAllByStatus(String status) {
-        return patientRepository.findAllByStatus(status);
+    public List<Patient> findAllPatientsByEmployeeStatus(String status) {
+        return patientRepository.findAllPatientsByEmployeeStatus(status);
     }
 
 
