@@ -23,7 +23,7 @@
     }
 
     //Create a route to get a doctor by employee_id.
-    @GetMapping("/employee/{employee_id}")
+    @GetMapping("/employee/id/{employee_id}")
     public Employee getEmployeeByEmployeeId(@PathVariable(value="employee_id") int employeeId) {
         return employeeService.getEmployeeByEmployeeId(employeeId);
     }
