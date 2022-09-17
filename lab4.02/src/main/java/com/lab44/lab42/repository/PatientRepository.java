@@ -6,12 +6,13 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Date;
 import java.util.List;
 
 @Repository
 public interface PatientRepository extends JpaRepository<Patient, Integer> {
 
-    public List<Patient> findByDateOfBirthBetween();
+    List<Patient> findByDateOfBirthBetween(Date initialDate, Date finalDate);
 
     @Query(value = "SELECT * FROM patient p left join employee e on e.employee_id = p.admitted_by WHERE e.department = :department",
             nativeQuery = true)

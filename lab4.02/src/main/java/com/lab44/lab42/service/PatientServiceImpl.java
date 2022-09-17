@@ -25,8 +25,8 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
-    public List<Patient> findAllByDateOfBirthBetween(Date dateOfBirth, Date dateOfBirth2) {
-        return patientRepository.findByDateOfBirthBetween();
+    public List<Patient> findAllByDateOfBirthBetween(Date initialDate, Date finalDate) {
+        return patientRepository.findByDateOfBirthBetween(initialDate, finalDate);
     }
 
     @Override

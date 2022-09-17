@@ -12,7 +12,7 @@ public interface PatientService {
 
     Patient getPatientById(int patientId);
 
-    List<Patient> findAllByDateOfBirthBetween(Date dateOfBirth, Date dateOfBirth2);
+    List<Patient> findAllByDateOfBirthBetween(Date initialDate, Date finalDate);
 
     List<Patient> findAllPatientsByEmployeeDepartment(String department);
 

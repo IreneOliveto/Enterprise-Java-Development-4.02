@@ -31,9 +31,9 @@ public class PatientController {
     }
 
     //Create a route to get patients date of birth within a specified range.
-    @GetMapping("/patients/date/{date}")
-    public List<Patient> findAllByDateOfBirthBetween(@RequestParam(value = "dateOfBirth") Date dateOfBirth, @RequestParam(value = "dateOfBirth2") Date dateOfBirth2){
-        return patientService.findAllByDateOfBirthBetween(dateOfBirth, dateOfBirth2);
+    @GetMapping("/patients/date-between/{date}")
+    public List<Patient> findAllByDateOfBirthBetween(@RequestParam(value = "dateOfBirth") Date initialDate, @RequestParam(value = "dateOfBirth2") Date finalDate){
+        return patientService.findAllByDateOfBirthBetween(initialDate, finalDate);
     }
 
     //Create a route to get patients by the department that their admitting doctor is in
